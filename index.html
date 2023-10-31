@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Food</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <script src="script.js" async></script>
+</head>
+<body onload="render()">
+
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo-container">
+                <div class="header__logo-arrow"></div>
+                <img class="header__logo" src="./img/logo.jpg" alt="Logo">
+            </div>
+            <span class="hide-mobile">Speisekarte</span>
+            <div class="header__end">
+                <div class="header__swiss-container">
+                    <img class="header__swiss" src="./img/ch.jpg" alt="Sprache Deutsch">
+                </div>
+                <div class="header__list-container">
+                    <span class="header__list">
+                        <svg viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="menu">
+            <div class="menu__container">
+                <div class="menu__header">
+                    <img class="menu__image-header" src="./img/pizzas.jpg" alt="Bild von Pizzen">
+                    <div class="menu__logo">
+                        <img class="menu__logo-img" src="img/ristorante.jpg" alt="Bild von Logo">
+                    </div>
+                </div>
+                <div class="menu__intro-container">
+                    <div class="menu__headline">
+                        <h2 class="menu__heading">Ristorante Luigi</h2>
+                        <div class="menu__headline-icons">
+                            <div class="menu__headline-icons-container">
+                                <svg class="menu__headline-icon" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                </svg>
+                            </div>
+                            <div onclick="showRedHeart()" class="menu__headline-icons-container">
+                                <svg id="heart1" class="menu__headline-icon" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg id="heart2" class="menu__headline-icon-fill d-none" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                  </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu__rating">
+                        <span class="menu__rating-icon">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                        </span>
+                        <span class="menu__rating-icon">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                        </span>
+                        <span class="menu__rating-icon">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                        </span>
+                        <span class="menu__rating-icon">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                        </span>
+                        <span class="menu__rating-icon">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                        </span>
+                        <span class="menu__rating-text">2.1k Bewertungen</span>
+                    </div>
+                    <div class="menu__conditions">
+                        <span class="menu__conditions-bag">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                            </svg>
+                        </span>
+                        <span> Min. 18,00 CHF</span>
+                        <span class="menu__conditions-bp">&#x2022;</span>
+                        <span class="menu__conditions-bicycle">
+                            <svg viewBox="0 0 16 16">
+                                <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+                            </svg>
+                        </span>
+                        <span class="menu__conditions-free"> Kostenlos*</span>
+                    </div>
+                    <p class="menu__restaurant-descr">Bei diesem Restaurant kannst du Stempel sammeln. Stelle beim Bestellabschluss bitte sicher,
+                        dass du dich für unseren Newsletter angemeldet hast, um deine Stempel per E-Mail zu erhalten.
+                    </p>
+                </div>
+                <div class="menu__dishes-container" id="dishes">
+                    <h2 class="menu__dishes-title1">Beliebt</h2>
+                    <div onclick="addToArray(0), clearCart()" class="menu__dish">
+                        <div class="menu__dish-headline">
+                            <h3 id="menu0" class="menu__dish-title">Pizza Salami (pikant)</h3>
+                            <span class="menu__dish-add">
+                                <svg class="menu__dish-add-icon" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="menu__dish-info">mit Tomatensauce, Mozzarella, Oregano und pikanter Salami</span>
+                        <div class="menu__dish-price">
+                            <span id="price0" class="menu__dish-price">19,00</span> CHF
+                        </div>
+                    </div>
+                    <div onclick="addToArray(1), clearCart()" class="menu__dish">
+                        <div class="menu__dish-headline">
+                            <h3 id="menu1" class="menu__dish-title">Pizza Funghi</h3>
+                            <span class="menu__dish-add">
+                                <svg class="menu__dish-add-icon" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="menu__dish-info">mit Tomatensauce, Mozzarella, Oregano und Pilzen</span>
+                        <div class="menu__dish-price">
+                            <span id="price1" class="menu__dish-price">21,90</span> CHF
+                        </div>
+                    </div>
+                    <div onclick="addToArray(2), clearCart()" class="menu__dish">
+                        <div class="menu__dish-headline">
+                            <h3 id="menu2" class="menu__dish-title">Pizza Proscuitto</h3>
+                            <span class="menu__dish-add">
+                                <svg class="menu__dish-add-icon" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="menu__dish-info">mit Tomatensauce, Mozzarella, Oregano und Hinterschinken</span>
+                        <div class="menu__dish-price">
+                            <span id="price2" class="menu__dish-price">23,00</span> CHF
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cart" id="cart">
+            <div class="cart__container">
+                <h2 class="cart__heading">Warenkorb</h2>
+                <div class="cart__delivery-sub">
+                    <div class="cart__delivery-wrapper">
+                        <div class="cart__delivery bg-white" id="delivery">
+                            <span class="cart__delivery-icon">
+                                <svg viewBox="0 0 16 16">
+                                    <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+                                </svg>
+                            </span>
+                            <div class="cart__delivery-info">
+                                <div class="cart__delivery-title">Lieferung</div>
+                                <div class="cart__delivery-duration">20-30min</div>
+                            </div>
+                        </div>
+                        <div class="cart__take-away" id="take-away">
+                            <span class="cart__take-away-icon">
+                                <svg viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                  </svg>
+                            </span>
+                            <div class="cart__take-away-info">
+                                <div class="cart__take-away-title">Abholung</div>
+                                <div class="cart__take-away-duration">15-20min</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cart-content" class="cart__content">
+                    <div id="cart__content-preadd">
+                        <h2 class="cart__content-heading">Fülle deinen Warenkorb</h2>
+                        <p class="cart__content-text">Füge einige leckere Gerichte aus der Speisekarte hinzu und
+                            bestelle dein Essen.
+                        </p>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cart-mobile">
+        </section>
+    </main>
+    
+</body>
+</html>
